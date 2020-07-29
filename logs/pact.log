@@ -1,0 +1,54 @@
+I, [2020-07-29T16:49:11.417852 #8252]  INFO -- : Registered expected interaction GET /token/1234
+D, [2020-07-29T16:49:11.418458 #8252] DEBUG -- : {
+  "description": "GET user token",
+  "providerState": "user token",
+  "request": {
+    "method": "GET",
+    "path": "/token/1234",
+    "headers": {
+      "Accept": "application/json, text/plain, */*"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "token": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "bearer"
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2020-07-29T16:49:11.434465 #8252]  INFO -- : Received request GET /token/1234
+D, [2020-07-29T16:49:11.434627 #8252] DEBUG -- : {
+  "path": "/token/1234",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "axios/0.19.2",
+    "Host": "localhost:1234",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-07-29T16:49:11.434963 #8252]  INFO -- : Found matching response for GET /token/1234
+D, [2020-07-29T16:49:11.435082 #8252] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "token": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "bearer"
+    }
+  }
+}
+I, [2020-07-29T16:49:11.438106 #8252]  INFO -- : Verifying - interactions matched
+I, [2020-07-29T16:49:11.445463 #8252]  INFO -- : Cleared interactions
+I, [2020-07-29T16:49:11.452729 #8252]  INFO -- : Writing pact for token to /home/atrindade/dev/workspace-trinda/pact-poc/pacts/react-token.json
