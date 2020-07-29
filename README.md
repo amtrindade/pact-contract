@@ -1,4 +1,4 @@
-# Chapter 1 - Consumer Test
+# Consumer Test With Pact
 
 Consumer Driven Contract Testing with pact-js
 
