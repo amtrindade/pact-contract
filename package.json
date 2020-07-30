@@ -1,12 +1,12 @@
 {
   "name": "consumer",
   "version": "1.0.0",
-  "description": "Pact JS E2E Example",
+  "description": "Pact JS E2E Poc",
   "scripts": {
     "pacts": "mocha --recursive \"tests/*.pact.js\" --timeout 10000"
   },
-  "author": "prescottlewis707@gmail.com",
-  "license": "MIT",
+  "author": "amtrindade",
+  "license": "TrindaTech",
   "devDependencies": {
     "@pact-foundation/pact": "9.11.0",
     "axios": "0.19.2",

@@ -1,5 +1,5 @@
-I, [2020-07-29T16:49:11.417852 #8252]  INFO -- : Registered expected interaction GET /token/1234
-D, [2020-07-29T16:49:11.418458 #8252] DEBUG -- : {
+I, [2020-07-30T17:11:11.403892 #9069]  INFO -- : Registered expected interaction GET /token/1234
+D, [2020-07-30T17:11:11.404475 #9069] DEBUG -- : {
   "description": "GET user token",
   "providerState": "user token",
   "request": {
@@ -23,8 +23,8 @@ D, [2020-07-29T16:49:11.418458 #8252] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2020-07-29T16:49:11.434465 #8252]  INFO -- : Received request GET /token/1234
-D, [2020-07-29T16:49:11.434627 #8252] DEBUG -- : {
+I, [2020-07-30T17:11:11.417498 #9069]  INFO -- : Received request GET /token/1234
+D, [2020-07-30T17:11:11.417738 #9069] DEBUG -- : {
   "path": "/token/1234",
   "query": "",
   "method": "get",
@@ -36,8 +36,8 @@ D, [2020-07-29T16:49:11.434627 #8252] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-07-29T16:49:11.434963 #8252]  INFO -- : Found matching response for GET /token/1234
-D, [2020-07-29T16:49:11.435082 #8252] DEBUG -- : {
+I, [2020-07-30T17:11:11.418200 #9069]  INFO -- : Found matching response for GET /token/1234
+D, [2020-07-30T17:11:11.418370 #9069] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json"
@@ -49,6 +49,6 @@ D, [2020-07-29T16:49:11.435082 #8252] DEBUG -- : {
     }
   }
 }
-I, [2020-07-29T16:49:11.438106 #8252]  INFO -- : Verifying - interactions matched
-I, [2020-07-29T16:49:11.445463 #8252]  INFO -- : Cleared interactions
-I, [2020-07-29T16:49:11.452729 #8252]  INFO -- : Writing pact for token to /home/atrindade/dev/workspace-trinda/pact-poc/pacts/react-token.json
+I, [2020-07-30T17:11:11.421234 #9069]  INFO -- : Verifying - interactions matched
+I, [2020-07-30T17:11:11.427392 #9069]  INFO -- : Cleared interactions
+I, [2020-07-30T17:11:11.432230 #9069]  INFO -- : Writing pact for token to /home/atrindade/dev/workspace-trinda/pact-poc/pacts/react-token.json
