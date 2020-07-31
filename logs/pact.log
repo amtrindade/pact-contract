@@ -1,5 +1,5 @@
-I, [2020-07-30T17:11:11.403892 #9069]  INFO -- : Registered expected interaction GET /token/1234
-D, [2020-07-30T17:11:11.404475 #9069] DEBUG -- : {
+I, [2020-07-31T13:47:09.634121 #31264]  INFO -- : Registered expected interaction GET /token/1234
+D, [2020-07-31T13:47:09.634496 #31264] DEBUG -- : {
   "description": "GET user token",
   "providerState": "user token",
   "request": {
@@ -23,8 +23,8 @@ D, [2020-07-30T17:11:11.404475 #9069] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2020-07-30T17:11:11.417498 #9069]  INFO -- : Received request GET /token/1234
-D, [2020-07-30T17:11:11.417738 #9069] DEBUG -- : {
+I, [2020-07-31T13:47:09.653518 #31264]  INFO -- : Received request GET /token/1234
+D, [2020-07-31T13:47:09.653952 #31264] DEBUG -- : {
   "path": "/token/1234",
   "query": "",
   "method": "get",
@@ -36,8 +36,9 @@ D, [2020-07-30T17:11:11.417738 #9069] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-07-30T17:11:11.418200 #9069]  INFO -- : Found matching response for GET /token/1234
-D, [2020-07-30T17:11:11.418370 #9069] DEBUG -- : {
+I, [2020-07-31T13:47:09.655088 #31264]  INFO -- : Found matching response for GET /token/1234
+I, [2020-07-31T13:47:09.660204 #31264]  INFO -- : Verifying - interactions matched
+D, [2020-07-31T13:47:09.660474 #31264] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json"
@@ -49,6 +50,52 @@ D, [2020-07-30T17:11:11.418370 #9069] DEBUG -- : {
     }
   }
 }
-I, [2020-07-30T17:11:11.421234 #9069]  INFO -- : Verifying - interactions matched
-I, [2020-07-30T17:11:11.427392 #9069]  INFO -- : Cleared interactions
-I, [2020-07-30T17:11:11.432230 #9069]  INFO -- : Writing pact for token to /home/atrindade/dev/workspace-trinda/pact-poc/pacts/react-token.json
+I, [2020-07-31T13:47:09.671665 #31264]  INFO -- : Cleared interactions
+I, [2020-07-31T13:47:09.681672 #31264]  INFO -- : Registered expected interaction GET /token/12
+D, [2020-07-31T13:47:09.681849 #31264] DEBUG -- : {
+  "description": "GET user token",
+  "providerState": "is not authenticated",
+  "request": {
+    "method": "GET",
+    "path": "/token/12"
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+    }
+  },
+  "metadata": null
+}
+I, [2020-07-31T13:47:09.689982 #31264]  INFO -- : Received request GET /token/1234
+D, [2020-07-31T13:47:09.690439 #31264] DEBUG -- : {
+  "path": "/token/1234",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "axios/0.19.2",
+    "Host": "localhost:1234",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-07-31T13:47:09.691013 #31264] ERROR -- : No matching interaction found for GET /token/1234
+E, [2020-07-31T13:47:09.691347 #31264] ERROR -- : Interaction diffs for that route:
+E, [2020-07-31T13:47:09.691496 #31264] ERROR -- : 
+W, [2020-07-31T13:47:09.698217 #31264]  WARN -- : Verifying - actual interactions do not match expected interactions. 
+Missing requests:
+	GET /token/12
+
+Unexpected requests:
+	GET /token/1234
+
+
+W, [2020-07-31T13:47:09.698390 #31264]  WARN -- : Missing requests:
+	GET /token/12
+
+Unexpected requests:
+	GET /token/1234
+
+
+I, [2020-07-31T13:47:09.706471 #31264]  INFO -- : Cleared interactions
+I, [2020-07-31T13:47:09.719810 #31264]  INFO -- : Writing pact for token to /home/atrindade/dev/workspace-trinda/pact-poc/pacts/react-token.json

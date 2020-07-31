@@ -17,6 +17,7 @@ describe('Consumer Test', () => {
         logLevel: "INFO"
     });
 
+
     before(() => provider.setup()
         .then(() => provider.addInteraction({
             state: "user token",
@@ -33,6 +34,8 @@ describe('Consumer Test', () => {
             }
         })))
 
+
+
     it('OK response', () => {
         get()
             .then((response) => {
@@ -41,6 +44,31 @@ describe('Consumer Test', () => {
     })
 
     afterEach(() => provider.verify())
+
+    describe("when a call is made", () => {
+        describe("and the user is not authenticated", () => {
+            before(() =>
+                provider.addInteraction({
+                    state: "is not authenticated",
+                    uponReceiving: "GET user token",
+                    withRequest: {
+                        method: "GET",
+                        path: "/token/12",
+                    },
+                    willRespondWith: {
+                        status: 401,
+                    },
+                })
+            )
+
+            it("returns a 401 unauthorized", () => {
+                get()
+                    .then((response) => {
+                        expect(response.status).to.be.equal('401')
+                    })
+            })
+        })
+    })
 
     after(() => provider.finalize())
 })  
