@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Pact JS E2E Poc",
   "scripts": {
-    "pacts": "mocha --recursive \"tests/*.pact.js\" --timeout 10000"
+    "pacts": "mocha --recursive \"tests/*.pact.js\" --timeout 10000",
+    "publish": "node tests/publish.js"
   },
-  "author": "amtrindade",
+  "author": "amtrindade@gmail.com",
   "license": "TrindaTech",
   "devDependencies": {
     "@pact-foundation/pact": "9.11.0",
