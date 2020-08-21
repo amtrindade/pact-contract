@@ -1,6 +1,6 @@
-# Consumer Test With Pact
+# POC Consumer Test With Pact
 
-Consumer Driven Contract Testing with pact-js
+POC realizada com Consumer Driven Contract Testing with pact-js
 
 ## Running the tests
 
